@@ -1,0 +1,34 @@
+<Window x:Class="WpfApp4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+    
+        <StackPanel>
+            <!--establecer binding
+                //OneWay
+            -->
+            <TextBox Name="cuadro" Width="400" Height="50" Margin="10" FontSize="35" Text="{Binding ElementName=mSlider, Path=Value, Mode=OneWay}"></TextBox>
+            <Slider Name="mSlider" Width="400" Minimum="0" Maximum="100"></Slider>
+            <!--establecer binding
+                //OneWayToSource
+            -->
+            <TextBox Name="cuadro1" Width="400" Height="50" Margin="10" FontSize="35" Text="{Binding ElementName=mSlider1, Path=Value, Mode=OneWayToSource}"></TextBox>
+            <Slider Name="mSlider1" Width="400" Minimum="0" Maximum="100"></Slider>
+            <!--establecer binding
+                //TwoWay
+            -->
+            <TextBox Name="cuadro2" Width="400" Height="50" Margin="10" FontSize="35" Text="{Binding ElementName=mSlider2, Path=Value, Mode=TwoWay}"></TextBox>
+            <Slider Name="mSlider2" Width="400" Minimum="0" Maximum="100"></Slider>
+            <!--establecer binding
+                //OneTime
+            -->
+            <TextBox Name="cuadro3" Width="400" Height="50" Margin="10" FontSize="35" Text="{Binding ElementName=mSlider3, Path=Value, Mode=OneTime}"></TextBox>
+            <Slider Name="mSlider3" Width="400" Minimum="0" Maximum="100"></Slider>
+        </StackPanel>
+    </Grid>
+</Window>
